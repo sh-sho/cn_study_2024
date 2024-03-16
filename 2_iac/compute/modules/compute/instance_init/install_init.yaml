@@ -45,6 +45,11 @@ runcmd:
     - mv ./kubectl /usr/local/bin/kubectl
     - kubectl version --client
     - echo 'kubectl Finish'
+
+     # helm install
+    - echo 'helm Install'
+    - curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+    - echo 'helm Finish'
     
     # oci-cli install
     - echo 'oci-cli Install'
@@ -67,12 +72,12 @@ runcmd:
     - apt purge -y nodejs npm
     - echo 'nodejs Finish'
     
-    # java21
-    - echo 'java21 Install'
-    - apt install -y openjdk-21-jdk
-    - echo 'java21 Finish'
+    # # java21
+    # - echo 'java21 Install'
+    # - apt install -y openjdk-21-jdk
+    # - echo 'java21 Finish'
 
-    # java17
-    - echo 'java17 Install'
-    - apt install -y openjdk-17-jdk
-    - echo 'java17 Finish'
+    # # java17
+    # - echo 'java17 Install'
+    # - apt install -y openjdk-17-jdk
+    # - echo 'java17 Finish'
